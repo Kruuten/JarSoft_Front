@@ -159,15 +159,18 @@ class BannerComponent extends Component {
 ////////////////////////////////////////////////
 
     errorHandle(e) {
-        console.log(e)
         this.setState({
             onError: true
         })
-         // (e.response && e.response.data) {
+        if (e.response && e.response.data) {
             this.setState({
-                errorBody : [e]
-            })
-    // }
+                errorBody : e.response.data.violations
+            })}
+        setTimeout(()=>
+            this.setState({
+                onError:false,
+                errorBody:[]
+            }), 3000)
     }
 
     setCreateBanner() {
@@ -299,7 +302,7 @@ class BannerComponent extends Component {
                     <button className="btn btn-primary" onClick={() => this.setCreateBanner()}>Create banner</button>
                 </div>
                 <div className="col-md-6">
-                    {errorBody.length > 0 && <div class="alert alert-danger">{JSON.stringify(errorBody)}</div>}
+                    {/*{errorBody.length > 0 && <div class="alert alert-danger">{JSON.stringify(errorBody)}</div>}*/}
                     {creating ? (
                         <div className="edit-form">
                             <h4 align="center">Create new banner</h4>

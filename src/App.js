@@ -15,6 +15,7 @@ import EventBus from "./common/EventBus";
 import BannerComponent from "./components/BannerComponent";
 import CategoryComponent from "./components/CategoryComponent";
 import BannerViewComponent from "./components/BannerViewComponent";
+import ProfileComponent from "./components/ProfileComponent";
 
 
 class App extends Component {
@@ -132,6 +133,7 @@ class App extends Component {
             <Route exact path="/login" component={Login} />
             <Route exact path="/register" component={Register} />
             <Route path="/user" component={BannerViewComponent} />
+            <Route path="/profile" component={ProfileComponent} />
             {showAdminBoard && <Route path="/admin" component={BoardAdmin}/>}
             {showAdminBoard && <Route path="/banners" component={BannerComponent}/>}
             {showAdminBoard && <Route path="/categories" component={CategoryComponent} />}
