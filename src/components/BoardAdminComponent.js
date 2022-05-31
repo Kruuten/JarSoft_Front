@@ -51,9 +51,6 @@ export default class BoardAdmin extends Component {
   }
 
   render() {
-    const filtered = this.state.banners.filter((item) => {
-      return item.name;
-    });
     return (
       <div className="container">
         <header className="jumbotron">

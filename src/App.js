@@ -7,10 +7,7 @@ import AuthService from "./services/AuthService";
 
 import Login from "./components/LoginComponent";
 import Register from "./components/RegisterComponent";
-import BoardUser from "./components/BoardUserComponent";
 import BoardAdmin from "./components/BoardAdminComponent";
-
-// import AuthVerify from "./common/auth-verify";
 import EventBus from "./common/EventBus";
 import BannerComponent from "./components/BannerComponent";
 import CategoryComponent from "./components/CategoryComponent";
@@ -93,7 +90,7 @@ class App extends Component {
               )}
               {currentUser && (
                     <li className="nav-item">
-                      <Link to={"/user"} className="nav-link">
+                      <Link to={"/bid"} className="nav-link">
                         User
                       </Link>
                     </li>
@@ -132,7 +129,7 @@ class App extends Component {
             <Route exact path={"/"} component={Login} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/register" component={Register} />
-            <Route path="/user" component={BannerViewComponent} />
+            <Route path="/bid" component={BannerViewComponent} />
             <Route path="/profile" component={ProfileComponent} />
             {showAdminBoard && <Route path="/admin" component={BoardAdmin}/>}
             {showAdminBoard && <Route path="/banners" component={BannerComponent}/>}

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import UserService from "../services/UserService";
 
-export default class Home extends Component {
+class Home extends Component {
   constructor(props) {
     super(props);
 

@@ -75,8 +75,6 @@ class CategoryComponent extends Component {
             })
     }
 
-    //////////////////////////////////////////////////////////////
-
     createCategory() {
         CategoryService.createCategory(this.state.editingCategory)
             .then( res => {
@@ -136,8 +134,6 @@ class CategoryComponent extends Component {
             })
     }
 
-////////////////////////////////////////////////
-
     errorHandle(e) {
         this.setState({
             onError: true
@@ -174,8 +170,6 @@ class CategoryComponent extends Component {
         });
     }
 
-////////////////////////////////////////////////
-
     cancelButton() {
         this.setState({
             editing: false,
@@ -207,15 +201,8 @@ class CategoryComponent extends Component {
         }))
     }
 
-
-
-    /////////////////////////////////////////////////////
-
     render() {
         const {searchName, categories, currentCategory, currentId, editing, creating, editingCategory, errorBody} = this.state;
-
-
-
         return (
             <div className="lis row">
                 <div className="col-sd-6">

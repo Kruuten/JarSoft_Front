@@ -91,8 +91,6 @@ class BannerComponent extends Component {
             })
     }
 
-/////////////////////////////////////////////////
-
     createBanner() {
         bannerService.createBanner(this.state.editingBanner)
             .then( res => {
@@ -102,11 +100,7 @@ class BannerComponent extends Component {
                     editingBanner: {
                         name: "",
                         price: 0,
-                        categories : {
-                            category: {
-                                name: ""
-                            },
-                        },
+                        categories : [],
                         content: ""
                     }
                 })
@@ -156,8 +150,6 @@ class BannerComponent extends Component {
             })
     }
 
-////////////////////////////////////////////////
-
     errorHandle(e) {
         this.setState({
             onError: true
@@ -198,8 +190,6 @@ class BannerComponent extends Component {
             creating: false
         });
     }
-
-////////////////////////////////////////////////
 
     cancelButton() {
         this.setState({
@@ -255,11 +245,9 @@ class BannerComponent extends Component {
         }))
     }
 
-/////////////////////////////////////////////////////////
+
     render() {
         const {searchName, banners, currentBanner, currentId, editing, creating, categories, editingBanner, errorBody} = this.state;
-
-
         return (
             <div className="lis row">
                 <div className="col-sd-6">
@@ -288,7 +276,6 @@ class BannerComponent extends Component {
                     <ul className="list-group">
                         {banners && banners.map((banner, _index) => (
                             <>
-
                                 <li
                                     className={"list-group-item list-group-item-action" + (banner.id === currentId ? " active" : "")}
                                     onClick={() => this.setActiveBanner(banner, banner.id)}
@@ -302,7 +289,6 @@ class BannerComponent extends Component {
                     <button className="btn btn-primary" onClick={() => this.setCreateBanner()}>Create banner</button>
                 </div>
                 <div className="col-md-6">
-                    {/*{errorBody.length > 0 && <div class="alert alert-danger">{JSON.stringify(errorBody)}</div>}*/}
                     {creating ? (
                         <div className="edit-form">
                             <h4 align="center">Create new banner</h4>
@@ -351,7 +337,7 @@ class BannerComponent extends Component {
                                 </div>
                             </form>
                             <div>
-                                <button className="btn btn-success" onClick={() => this.createBanner(currentBanner)}>Create</button>
+                                <button className="btn btn-success" onClick={() => this.createBanner(editingBanner)}>Create</button>
                                 <button className="btn btn-info" onClick={() => this.cancelButton()}>Cancel</button>
                             </div>
                         </div>

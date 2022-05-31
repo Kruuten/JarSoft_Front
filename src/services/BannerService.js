@@ -1,7 +1,7 @@
 import axios from 'axios';
 import authHeader from "./auth-header";
 
-const BANNER_API_BASE_URL ="http://localhost:8080/api/banner/banners";
+const BANNER_API_BASE_URL ="http://localhost:8080/banners";
 const BANNER_BID_URL = "http://localhost:8080/bid";
 
 class BannerService{
