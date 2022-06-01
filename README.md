@@ -8,6 +8,9 @@ Spring boot App with frontend on React, MySQL, Swagger
 #### 2. Free ports for launching: ####
 > $ Frontend: 8081
 
+#### 3. Check Java version: ####
+> $ Make sure you using jdk17
+
 #### 3. Run project: ####
 > $ npm start
 
