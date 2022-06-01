@@ -1,4 +1,4 @@
-# Jarsoft frontend
+# JarSoft frontend
 Spring boot App with frontend on React, MySQL, Swagger
 
 ### Instrucion to install: ###
