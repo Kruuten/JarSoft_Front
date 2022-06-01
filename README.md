@@ -10,6 +10,7 @@ Spring boot App with frontend on React, MySQL, Swagger
 
 #### 3. Run project: ####
 > $ npm install - if you already have this package, go to the next command
+> 
 > $ npm start
 
 #### 4. Check app: ####
